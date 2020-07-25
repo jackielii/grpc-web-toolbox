@@ -22,8 +22,6 @@ generate protobuf messages in typescript
 
 generate grpc-web calls
 
-## N.B.
-
 ## tested at version
 
 grpc-web@1.2.0
