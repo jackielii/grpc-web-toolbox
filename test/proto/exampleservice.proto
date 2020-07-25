@@ -1,0 +1,51 @@
+syntax = "proto3";
+
+package tes.product.exampleservice;
+
+option go_package = "exampleservice;exampleservicepb";
+option java_multiple_files = true;
+option java_outer_classname = "ExampleServiceProto";
+option java_package = "com.tes.product.exampleservice";
+
+message AddProjectRequest {
+  string project_name = 1;
+}
+
+message AddProjectResponse {
+  string project_id = 1;
+  string project_name = 2;
+}
+
+message Project {
+  string project_name = 1;
+  string project_type = 2;
+  repeated string my_array = 3;
+  oneof data {
+    string one_hello = 4;
+    string one_world = 5;
+  }
+}
+
+message UpdateProjectRequest {
+  string project_id = 1;
+  Project project_body = 2;
+  int64 xxx = 3;
+}
+
+message UpdateProjectResponse {
+  string message = 1;
+}
+
+message DataRequest {
+  string project_id = 1;
+}
+
+message DataStreamResponse {
+  string chunk = 1;
+}
+
+service ExampleServiceProject {
+  rpc AddProject(AddProjectRequest) returns (AddProjectResponse);
+  rpc UpdateProject(UpdateProjectRequest) returns (UpdateProjectResponse);
+  rpc Data(DataRequest) returns (stream DataStreamResponse);
+}
