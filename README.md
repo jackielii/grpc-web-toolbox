@@ -1,4 +1,4 @@
-# protoc-gen-grpc-web-wrap
+# grpc-web-toolbox
 
 ## why?
 
