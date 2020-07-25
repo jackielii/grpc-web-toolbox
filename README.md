@@ -12,6 +12,16 @@ https://github.com/grpc/grpc-web/issues/393
 3. try to be as simple as possible: type + set
 4. reuse protobuf js toObject bits
 
+## components
+
+### ts-proto
+
+generate protobuf messages in typescript
+
+### grpc-web-wrap
+
+generate grpc-web calls
+
 ## N.B.
 
 1. consistent checks are done per protobuf-go requirements, e.g. proto files in the same folder need to have the same package name
