@@ -22,6 +22,10 @@ generate protobuf messages in typescript
 
 generate grpc-web calls
 
+## N.B.
+
+1. consistent checks are done per protobuf-go requirements, e.g. proto files in the same folder need to have the same package name
+
 ## tested at version
 
 grpc-web@1.2.0
